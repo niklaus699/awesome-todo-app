@@ -6,7 +6,7 @@ dotenv.config();
 
 const { Pool } = pg;
 
-const isProduction = process.env.DATABASE_URL?.includes("render.com");
+const isProduction = process.env.NODE_ENV === "production";
 const db = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: isProduction ? {
