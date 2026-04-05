@@ -7,7 +7,7 @@ import authRoutes from "./src/routes/auth.js";
 
 dotenv.config();
 const allowedOrigins = [
-  "https://awesome-todo-app-indol.vercel.app",
+  "https://awesome-todo-app-seven.vercel.app/",
   "http://localhost:5173", // your local dev port
 ];
 const app = express();
