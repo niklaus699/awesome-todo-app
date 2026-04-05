@@ -7,7 +7,7 @@ import authRoutes from "./src/routes/auth.js";
 
 dotenv.config();
 const allowedOrigins = [
-  "https://awesome-todo-app-seven.vercel.app/",
+  "https://awesome-todo-app-seven.vercel.app",
   "http://localhost:5173", // your local dev port
 ];
 const app = express();
@@ -28,7 +28,7 @@ app.use(express.json());
 
 app.use("/api/todos", todoRoutes);
 app.use("/api/auth", authRoutes);
-
+app.get("/health", (req, res) => res.json({ status: "ok" }));
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
