@@ -2,7 +2,6 @@ import express, { application } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import initDB from "./src/models/initDB.js";
-import db from "./src/db.js";
 import todoRoutes from "./src/routes/todos.js";
 import authRoutes from "./src/routes/auth.js";
 
