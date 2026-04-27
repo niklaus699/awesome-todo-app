@@ -4,6 +4,7 @@ import cors from "cors";
 import initDB from "./src/models/initDB.js";
 import todoRoutes from "./src/routes/todos.js";
 import authRoutes from "./src/routes/auth.js";
+import healthRoutes from "./src/routes/health.js";
 
 
 dotenv.config();
@@ -31,7 +32,7 @@ app.use(
 app.use(express.json());
 app.use("/api/todos", todoRoutes);
 app.use("/api/auth", authRoutes);
-app.get("/health", (req, res) => res.json({ status: "ok" }));
+app.use("/api/health", healthRoutes);
 const PORT = process.env.PORT;
 
 
