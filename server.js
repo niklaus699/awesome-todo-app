@@ -12,7 +12,7 @@ dotenv.config();
 
 const allowedOrigins = [
   "https://awesome-todo-app-seven.vercel.app",
-  "http://localhost:5173", // your local dev port
+  "http://localhost:5173", // local dev port
 ];
 const app = express();
 app.use(
@@ -44,6 +44,3 @@ initDB()
     console.error("Failed to initialize database:", err);
     process.exit(1);
   });
-
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
