@@ -16,6 +16,5 @@ const db = new Pool({
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
 });
-console.log("DB URL:", process.env.DATABASE_URL);
 
 export default db;
